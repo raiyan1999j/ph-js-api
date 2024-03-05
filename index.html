@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind-css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/f1458b3047.js" crossorigin="anonymous"></script>
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily:{
+                'poppins':['Poppins','sans-serif']
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="max-w-[1440px] mx-auto font-poppins">
+    <!-- headerArea-start -->
+    <header>
+        <!-- navBarArea-start -->
+        <nav class="bg-white">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex h-16 justify-between">
+                <div class="flex">
+                  <div class="-ml-2 mr-2 flex items-center md:hidden">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                      <span class="absolute -inset-0.5"></span>
+                      <span class="sr-only">Open main menu</span>
+                      <!--
+                        Icon when menu is closed.
+          
+                        Menu open: "hidden", Menu closed: "block"
+                      -->
+                      <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>
+                      <!--
+                        Icon when menu is open.
+          
+                        Menu open: "block", Menu closed: "hidden"
+                      -->
+                      <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex flex-shrink-0 items-center text-[#403F3F] text-[25px] font-bold capitalize">
+                    hot gadget
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <button type="button" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-[#0D6EFD] px-[41px] py-[4px] text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 text-[20px] font-bold">
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="md:hidden" id="mobile-menu">
+              <div class="space-y-1 pb-3 pt-2">
+                <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
+                <a href="#" class="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700 sm:pl-5 sm:pr-6">Dashboard</a>
+                <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6">Team</a>
+                <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6">Projects</a>
+                <a href="#" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6">Calendar</a>
+              </div>
+              <div class="border-t border-gray-200 pb-3 pt-4">
+                <div class="flex items-center px-4 sm:px-6">
+                  <div class="flex-shrink-0">
+                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </div>
+                  <div class="ml-3">
+                    <div class="text-base font-medium text-gray-800">Tom Cook</div>
+                    <div class="text-sm font-medium text-gray-500">tom@example.com</div>
+                  </div>
+                  <button type="button" class="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View notifications</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-3 space-y-1">
+                  <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6">Your Profile</a>
+                  <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6">Settings</a>
+                  <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6">Sign out</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!-- navBarArea-finish -->
+        <!-- bannerArea-start -->
+        <section class="mt-[50px]">
+            <div class="w-[1140px] mx-auto">
+                <div class="w-[799px] mx-auto text-center">
+                    <h1 class="text-[#100F0F] text-[65px] font-bold capitalize">
+                        Apple Iphone 13 Pro Max
+                    </h1>
+                    <p class="text-[#706F6F] text-lg font-normal mt-6 mb-8">
+                        Visit our phone shop for top brands and unbeatable deals on the latest smartphones and accessories today!
+                    </p>
+                    <button class="text-white text-xl font-bold py-[17px] px-[35px] rounded-lg bg-[#0D6EFD] capitalize">
+                        buy now
+                    </button>
+                </div>
+            </div>
+            <div class="w-[1140px] mx-auto mt-[72px]">
+                <div class="w-[841px] h-[585px] mx-auto">
+                    <img src="./image/bannerImg.png" alt="banner" class="h-full w-full border-dashed border-[#706F6F] border">
+                </div>
+            </div>
+        </section>
+        <!-- bannerArea-finish -->
+    </header>
+    <!-- headerArea-finish -->
+    <!-- mainArea-start -->
+    <main>
+        <!-- searchArea-start -->
+        <section class="mt-[120px]">
+            <div class="w-[1140px] mx-auto">
+                <div class="w-[752px] mx-auto">
+                    <div>
+                        <label for="email" class="block text-[35px] font-semibold leading-6 text-[#100F0F] text-center">Search your phone</label>
+                        <div class="mt-[30px] flex rounded-md shadow-sm">
+                          <div class="relative flex flex-grow items-stretch focus-within:z-10 h-16">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <input type="email" name="email" id="email" class="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Search your phone">
+                          </div>
+                          <button type="button" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md w-[150px] text-xl font-bold text-white ring-1 ring-inset ring-gray-300 hover:bg-sky-600 bg-[#0D6EFD] justify-center">
+                            Search
+                          </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <!-- searchArea-finish -->
+        <!-- productArea-start -->
+        <section class="mt-[50px]">
+            <div class="w-[1140px] mx-auto">
+                <div class="grid grid-cols-[364px_364px_364px] gap-x-6 gap-y-6">
+                    <div class="border rounded-lg">
+                        <div class="flex flex-col content-between items-center">
+                            <div class="h-[300px] w-[314px] pt-[39px] pb-[48px] pl-[52px] pr-[48px]">
+                                <div class="h-[213px] w-[214px] border border-gray-400 border-dashed ">
+                                    <img src="" alt="phoneImage">
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center text-center px-9 pb-[25px]">
+                                <h3 class="text-[#403F3F] text-[25px] font-bold capitalize">Iphone 13 Pro Max</h3>
+                                <p class="text-[#706F6F] text-lg font-normal capitalize mt-5 mb-2">
+                                    There are many variations of passages of available, but the majority have suffered
+                                </p>
+                                <p class="text-[#403F3F] text-[25px] font-bold">
+                                    $999
+                                </p>
+                                <button class="text-white bg-[#0D6EFD] text-xl font-semibold capitalize py-[9px] px-[25px] rounded-lg mt-4">
+                                    show details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- productArea-finish -->
+    </main>
+    <!-- mainArea-finish -->
+    <!-- footerArea-start -->
+    <footer class="bg-[#0d6efd0d] mt-[120px]">
+        <section>
+            <div class="w-[1140px] mx-auto after:h-[1px] after:w-full after:bg-gray-400 after:content-'' after:table after:mt-[50px]">
+                <div class="flex flex-row justify-between items-center">
+                    <div>
+                        <h2 class="text-[#100F0F] capitalize font-sans text-[45px] font-bold">hot gadgets</h2>
+                        <p class="text-[#706F6F] capitalize font-sans text-lg font-semibold">
+                            You can definitely work.
+                        </p>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="h-[40px] w-[40px] border border-gray-400 border-dashed flex justify-center items-center mr-4">
+                            <i class="fa-brands fa-facebook text-lg text-blue-600"></i>
+                        </div>
+                        <div class="h-[40px] w-[40px] border border-gray-400 border-dashed flex justify-center items-center mr-4">
+                            <i class="fa-brands fa-twitter text-lg text-sky-600"></i>
+                        </div>
+                        <div class="h-[40px] w-[40px] border border-gray-400 border-dashed flex justify-center items-center mr-4">
+                            <i class="fa-brands fa-instagram text-lg text-red-600"></i>
+                        </div>
+                        <div>
+                            <button class="capitalize font-sans text-xl text-white bg-[#0D6EFD] rounded-lg py-[18px] px-[22px]">
+                                join premium
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[1140px] mx-auto mt-[50px]">
+                <div class="flex flex-row justify-between">
+                    <div>
+                        <ul class="text-[#403F3F] text-xl font-medium capitalize">
+                            <li class="mb-3">
+                                <a href="#">product</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#">browse jobs</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#">remote jobs</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#">startup jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">company jobs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-[#403F3F] text-xl font-medium capitalize">
+                            <li class="mb-3"><a href="#">popular</a></li>
+                            <li class="mb-3"><a href="#">UIUX design</a></li>
+                            <li class="mb-3"><a href="#">product design</a></li>
+                            <li class="mb-3"><a href="#">backend developer</a></li>
+                            <li><a href="#">frontend developer</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-[#403F3F] text-xl font-medium capitalize">
+                            <li class="mb-3"><a href="#">resource</a></li>
+                            <li class="mb-3"><a href="#">faq</a></li>
+                            <li class="mb-3"><a href="#">support</a></li>
+                            <li class="mb-3"><a href="#">privacy policy</a></li>
+                            <li><a href="#">terms of service</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-[#403F3F] text-xl font-medium capitalize">
+                            <li class="mb-3"><a href="#">company</a></li>
+                            <li class="mb-3"><a href="#">about us</a></li>
+                            <li class="mb-3"><a href="#">contact us</a></li>
+                            <li class="mb-3"><a href="#">career tips</a></li>
+                            <li><a href="#">careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+    <!-- footerArea-finish -->
+</body>
+</html>
